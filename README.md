@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live Demo Link
+
+You can use [this link](https://my44calculator.herokuapp.com/) to access the demo version of this app that deployed to Heroku. 
+
 ## Available Scripts
 
 In the project directory, you can run:
