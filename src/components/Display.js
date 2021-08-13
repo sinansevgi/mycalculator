@@ -8,5 +8,9 @@ export default function Display({ result }) {
 }
 
 Display.propTypes = {
-  result: PropTypes.number.isRequired,
+  result: PropTypes.number,
+};
+
+Display.defaultProps = {
+  result: 0,
 };
