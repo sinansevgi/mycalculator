@@ -4,16 +4,28 @@ import '../assets/App.css';
 import Display from './Display';
 import ButtonPannel from './ButtonPannel';
 
-function App() {
-  if (!calculate) {
-    return true;
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: '',
+      next: '',
+      operation: '',
+    };
   }
-  return (
-    <>
-      <Display />
-      <ButtonPannel />
-    </>
-  );
+
+  handleChange(e) {
+    this.setState((previousState) => { calculate({previousState.total, previousState.next, previousState.operation}, e.target.value); });
+  }
+
+  render() {
+    return (
+      <>
+        <Display />
+        <ButtonPannel />
+      </>
+    );
+  }
 }
 
 export default App;

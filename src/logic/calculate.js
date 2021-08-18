@@ -36,7 +36,7 @@ const calculate = (dataObject, buttonName) => {
     }
   }
 
-  return (total);
+  return ({ total, next, operation });
 };
 
 export { calculate as default };
