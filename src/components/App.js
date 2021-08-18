@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-state */
 import React from 'react';
 import calculate from '../logic/calculate';
 import '../assets/App.css';
@@ -12,17 +13,19 @@ class App extends React.Component {
       next: '',
       operation: '',
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleChange(e) {
-    this.setState((previousState) => { calculate({previousState.total, previousState.next, previousState.operation}, e.target.value); });
+  handleClick(buttonPressed) {
+    this.setState((prevState) => calculate(prevState, buttonPressed));
   }
 
   render() {
+    const { total, next, operation } = this.state;
     return (
       <>
-        <Display />
-        <ButtonPannel />
+        <Display current={total} result={next} sign={operation} />
+        <ButtonPannel handleClick={(e) => this.handleClick(e)} />
       </>
     );
   }

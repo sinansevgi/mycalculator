@@ -1,39 +1,44 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
-export default function Display() {
+export default function ButtonPanel({ handleClick }) {
   return (
     <div className="buttons-container">
       <div className="top-row">
-        <Button name="AC" />
-        <Button name="+/-" />
-        <Button name="%" />
-        <Button name="÷" />
+        <Button name="AC" handleClick={(e) => { handleClick(e); }} />
+        <Button name="+/-" handleClick={(e) => { handleClick(e); }} />
+        <Button name="%" handleClick={(e) => { handleClick(e); }} />
+        <Button name="÷" handleClick={(e) => { handleClick(e); }} />
       </div>
       <div className="first-row">
-        <Button name="7" />
-        <Button name="8" />
-        <Button name="9" />
-        <Button name="X" />
+        <Button name="7" handleClick={(e) => { handleClick(e); }} />
+        <Button name="8" handleClick={(e) => { handleClick(e); }} />
+        <Button name="9" handleClick={(e) => { handleClick(e); }} />
+        <Button name="X" handleClick={(e) => { handleClick(e); }} />
       </div>
       <div className="second-row">
-        <Button name="4" />
-        <Button name="5" />
-        <Button name="6" />
-        <Button name="-" />
+        <Button name="4" handleClick={(e) => { handleClick(e); }} />
+        <Button name="5" handleClick={(e) => { handleClick(e); }} />
+        <Button name="6" handleClick={(e) => { handleClick(e); }} />
+        <Button name="-" handleClick={(e) => { handleClick(e); }} />
       </div>
       <div className="third-row">
-        <Button name="1" />
-        <Button name="2" />
-        <Button name="3" />
-        <Button name="+" />
+        <Button name="1" handleClick={(e) => { handleClick(e); }} />
+        <Button name="2" handleClick={(e) => { handleClick(e); }} />
+        <Button name="3" handleClick={(e) => { handleClick(e); }} />
+        <Button name="+" handleClick={(e) => { handleClick(e); }} />
       </div>
       <div className="forth-row">
-        <Button name="0" />
-        <Button name="." />
-        <Button name="=" />
+        <Button name="0" handleClick={(e) => { handleClick(e); }} />
+        <Button name="." handleClick={(e) => { handleClick(e); }} />
+        <Button name="=" handleClick={(e) => { handleClick(e); }} />
       </div>
     </div>
 
   );
 }
+
+ButtonPanel.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+};
