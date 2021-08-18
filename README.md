@@ -5,6 +5,7 @@ Simple calculator project made with React
 
 - ReactJS
 - Javascript
+- Big.js
 
 ## Getting Started with Create React App
 
@@ -63,7 +64,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/sinansevgi/mycalculator/issues/).
 
 ## Show your support
 
