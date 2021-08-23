@@ -15,6 +15,6 @@ Display.propTypes = {
 
 Display.defaultProps = {
   result: '0',
-  current: '',
+  current: '0',
   sign: '',
 };
