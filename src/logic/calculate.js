@@ -17,14 +17,14 @@ const calculate = (dataObject, buttonName) => {
       total = '';
       next = '';
       operation = '';
-    } else if (buttonName === '+/-') {
+    } else if (buttonName === '+/-' && (next || total)) {
       if (total !== '') {
         total = operate(total, '-1', 'X');
       } else {
         total = operate(next, '-1', 'X');
         next = '';
       }
-    } else if (buttonName === '%') {
+    } else if (buttonName === '%' && (next || total)) {
       if (total !== '') {
         total = operate(total, '100', '÷');
       } else {
