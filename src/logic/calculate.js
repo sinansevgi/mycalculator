@@ -1,7 +1,7 @@
 import operate from './operate';
 
 const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-const operators = ['+', '-', 'X', '/', '='];
+const operators = ['+', '-', 'X', '÷', '='];
 const quickActions = ['AC', '+/-', '.', '%'];
 
 const calculate = (dataObject, buttonName) => {
