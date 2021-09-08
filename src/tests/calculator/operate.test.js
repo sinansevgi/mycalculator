@@ -23,6 +23,6 @@ describe('Test each mathematical operation in operate.js', () => {
     expect(typeof operate('8', '2', '+')).not.toBe('big');
   });
   test('it should not divide to zero', () => {
-    expect(operate('8', '0', '÷')).toBe('0');
+    expect(operate('8', '0', '÷')).toBe('∞');
   });
 });
