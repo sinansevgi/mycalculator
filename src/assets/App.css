@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
+.App {
+  width: 100%;
+}
+
 .main-calculator {
   display: block;
   width: 700px;
@@ -41,4 +45,58 @@ button {
 
 .orange {
   background-color: coral;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  list-style: none;
+  margin: 10px;
+}
+
+.navbar li:first-child::after {
+  content: '|';
+  margin-left: 10px;
+}
+
+.navbar li:last-child::before {
+  margin-right: 10px;
+  content: '|';
+}
+
+.navbar a {
+  font-size: 1.5em;
+}
+
+.calculator {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator h2 {
+  font-size: 2em;
+}
+
+.home {
+  font-size: 1.2em;
+  margin-top: 50px;
+}
+
+.quotes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  text-align: center;
 }
