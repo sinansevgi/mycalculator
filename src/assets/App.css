@@ -1,15 +1,31 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+.main-calculator {
+  display: block;
+  width: 700px;
 }
 
 .calculator-display {
-  height: 2em;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid;
+  height: 3em;
+  text-align: right;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 3em;
+  overflow-y: hidden;
+  background-color: #f0fcef;
+}
+
+.buttons-container {
+  height: 100px;
 }
 
 button {
-  width: 3em;
-  height: 3em;
-  margin: 5px;
+  width: 25%;
+  border: 1px solid black;
+  font-size: 4em;
 }
 
 #root {
@@ -17,4 +33,12 @@ button {
   flex-direction: column;
   align-items: center;
   padding: 2em;
+}
+
+.zero {
+  width: 50%;
+}
+
+.orange {
+  background-color: coral;
 }
