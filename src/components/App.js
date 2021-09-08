@@ -1,34 +1,11 @@
-/* eslint-disable react/no-unused-state */
 import React from 'react';
-import calculate from '../logic/calculate';
 import '../assets/App.css';
-import Display from './Display';
-import ButtonPannel from './ButtonPannel';
+import Calculator from './Calculator';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: '',
-      next: '',
-      operation: '',
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(buttonPressed) {
-    this.setState((prevState) => calculate(prevState, buttonPressed));
-  }
-
-  render() {
-    const { total, next, operation } = this.state;
-    return (
-      <div className="main-calculator">
-        <Display current={total} result={next} sign={operation} />
-        <ButtonPannel handleClick={(e) => this.handleClick(e)} />
-      </div>
-    );
-  }
+export default function App() {
+  return (
+    <div className="main-calculator">
+      <Calculator />
+    </div>
+  );
 }
-
-export default App;
